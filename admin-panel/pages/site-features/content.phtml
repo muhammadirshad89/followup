@@ -1,0 +1,330 @@
+<div class="container-fluid">
+    <div>
+        <h3>Manage Features</h3>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="#">Home</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="#">Settings</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">Manage Features</li>
+            </ol>
+        </nav>
+    </div>
+    <!-- Vertical Layout -->
+    <div class="row">
+        <div class="col-lg-3 col-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <h6 class="card-title">Credits system settings</h6>
+                    <div class="site-settings-alert"></div>
+                    <form class="site-settings" method="POST">
+                        <label for="user_registration">Bag of Credits</label><div class="clearfix"></div><br>
+                        <div class="form-group form-float">
+                            <div class="form-line focused">
+                                <label class="form-label">Points</label>
+                                <input type="text" name="bag_of_credits_amount" class="form-control" value="<?php echo $wo['config']['bag_of_credits_amount']?>">
+                            </div>
+                        </div>
+                        <div class="form-group form-float">
+                            <div class="form-line focused">
+                                <label class="form-label">Price <?php echo $wo['config']['currency_symbol']?></label>
+                                <input type="text" name="bag_of_credits_price" class="form-control" value="<?php echo $wo['config']['bag_of_credits_price']?>">
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <br>
+
+                        <label for="user_registration">Box of Credits</label><div class="clearfix"></div><br>
+                        <div class="form-group form-float">
+                            <div class="form-line focused">
+                                <label class="form-label">Points</label>
+                                <input type="text" name="box_of_credits_amount" class="form-control" value="<?php echo $wo['config']['box_of_credits_amount']?>">
+                            </div>
+                        </div>
+                        <div class="form-group form-float">
+                            <div class="form-line focused">
+                                <label class="form-label">Price <?php echo $wo['config']['currency_symbol']?></label>
+                                <input type="text" name="box_of_credits_price" class="form-control" value="<?php echo $wo['config']['box_of_credits_price']?>">
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <br>
+
+                        <label for="user_registration">Chest of Credits</label><div class="clearfix"></div><br>
+                        <div class="form-group form-float">
+                            <div class="form-line focused">
+                                <label class="form-label">Points</label>
+                                <input type="text" name="chest_of_credits_amount" class="form-control" value="<?php echo $wo['config']['chest_of_credits_amount']?>">
+                            </div>
+                        </div>
+                        <div class="form-group form-float">
+                            <div class="form-line focused">
+                                <label class="form-label">Price <?php echo $wo['config']['currency_symbol']?></label>
+                                <input type="text" name="chest_of_credits_price" class="form-control" value="<?php echo $wo['config']['chest_of_credits_price']?>">
+                            </div>
+                        </div>
+
+                        <label for="user_registration">More Stickers Credits</label><div class="clearfix"></div><br>
+                        <div class="form-group form-float">
+                            <div class="form-line focused">
+                                <label class="form-label">Points</label>
+                                <input type="text" name="more_stickers_credits_price" class="form-control" value="<?php echo $wo['config']['more_stickers_credits_price']?>">
+                            </div>
+                        </div>
+
+                        <div class="clearfix"></div>
+                        <input type="hidden" name="hash_id" value="<?php echo Wo_CreateSession();?>">
+                        <button type="submit" class="btn btn-primary m-t-15 waves-effect">Save</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <h6 class="card-title">Premium users settings</h6>
+                    <div class="site-settings-alert2"></div>
+                    <form class="site-settings2" method="POST">
+                        <label for="user_registration">Weekly</label><div class="clearfix"></div><br>
+                        <div class="form-group form-float">
+                            <div class="form-line focused">
+                                <label class="form-label">Price <?php echo $wo['config']['currency_symbol']?></label>
+                                <input type="text" name="weekly_pro_plan" class="form-control" value="<?php echo $wo['config']['weekly_pro_plan']?>">
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <br>
+
+                        <label for="user_registration">Monthly</label><div class="clearfix"></div><br>
+                        <div class="form-group form-float">
+                            <div class="form-line focused">
+                                <label class="form-label">Price <?php echo $wo['config']['currency_symbol']?></label>
+                                <input type="text" name="monthly_pro_plan" class="form-control" value="<?php echo $wo['config']['monthly_pro_plan']?>">
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <br>
+
+                        <label for="user_registration">Yearly</label><div class="clearfix"></div><br>
+                        <div class="form-group form-float">
+                            <div class="form-line focused">
+                                <label class="form-label">Price <?php echo $wo['config']['currency_symbol']?></label>
+                                <input type="text" name="yearly_pro_plan" class="form-control" value="<?php echo $wo['config']['yearly_pro_plan']?>">
+                            </div>
+                        </div>
+                        <br>
+
+                        <label for="user_registration">Lifetime</label><div class="clearfix"></div><br>
+                        <div class="form-group form-float">
+                            <div class="form-line focused">
+                                <label class="form-label">Price <?php echo $wo['config']['currency_symbol']?></label>
+                                <input type="text" name="lifetime_pro_plan" class="form-control" value="<?php echo $wo['config']['lifetime_pro_plan']?>">
+                            </div>
+                        </div>
+
+                        <input type="hidden" name="hash_id" value="<?php echo Wo_CreateSession();?>">
+                        <button type="submit" class="btn btn-primary m-t-15 waves-effect">Save</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <h6 class="card-title">Popularity Settings</h6>
+                    <div class="site-settings-alert5"></div>
+                    <form class="site-settings5" method="POST">
+                        <label for="user_registration">x10 Visits</label><div class="clearfix"></div><br>
+                        <div class="form-group form-float">
+                            <div class="form-line focused">
+                                <label class="form-label">Points</label>
+                                <input type="text" name="cost_per_xvisits" class="form-control" value="<?php echo $wo['config']['cost_per_xvisits']?>">
+                            </div>
+                        </div>
+                        <div class="form-group form-float">
+                            <div class="form-line focused">
+                                <label class="form-label">Minutes</label>
+                                <input type="text" name="xvisits_expire_time" class="form-control" value="<?php echo $wo['config']['xvisits_expire_time']?>">
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+
+                        <label for="user_registration">x4 Likes</label><div class="clearfix"></div><br>
+                        <div class="form-group form-float">
+                            <div class="form-line focused">
+                                <label class="form-label">Points</label>
+                                <input type="text" name="cost_per_xlike" class="form-control" value="<?php echo $wo['config']['cost_per_xlike']?>">
+                            </div>
+                        </div>
+                        <div class="form-group form-float">
+                            <div class="form-line focused">
+                                <label class="form-label">Minutes</label>
+                                <input type="text" name="xlike_expire_time" class="form-control" value="<?php echo $wo['config']['xlike_expire_time']?>">
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+
+                        <input type="hidden" name="hash_id" value="<?php echo Wo_CreateSession();?>">
+                        <button type="submit" class="btn btn-primary m-t-15 waves-effect">Save</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <h6 class="card-title">Boost me! settings</h6>
+                    <div class="site-settings-alert4"></div>
+                    <form class="site-settings4" method="POST">
+                        <label for="user_registration">Time to expire Boost</label><div class="clearfix"></div><br>
+                        <div class="form-group form-float">
+                            <div class="form-line focused">
+                                <label class="form-label">Minutes</label>
+                                <input type="text" name="boost_expire_time" class="form-control" value="<?php echo $wo['config']['boost_expire_time']?>">
+                            </div>
+                        </div>
+
+                        <label for="user_registration">Pro user Credits</label><div class="clearfix"></div><br>
+                        <div class="form-group form-float">
+                            <div class="form-line focused">
+                                <label class="form-label">Points</label>
+                                <input type="text" name="pro_boost_me_credits_price" class="form-control" value="<?php echo $wo['config']['pro_boost_me_credits_price']?>">
+                            </div>
+                        </div>
+
+                        <label for="user_registration">Normal user Credits</label><div class="clearfix"></div><br>
+                        <div class="form-group form-float">
+                            <div class="form-line focused">
+                                <label class="form-label">Points</label>
+                                <input type="text" name="normal_boost_me_credits_price" class="form-control" value="<?php echo $wo['config']['normal_boost_me_credits_price']?>">
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <input type="hidden" name="hash_id" value="<?php echo Wo_CreateSession();?>">
+                        <button type="submit" class="btn btn-primary m-t-15 waves-effect">Save</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <h6 class="card-title">Gift Settings</h6>
+                    <div class="site-settings-alert3"></div>
+                    <form class="site-settings3" method="POST">
+                        <label for="user_registration">Cost per gift sent</label><div class="clearfix"></div><br>
+                        <div class="form-group form-float">
+                            <div class="form-line focused">
+                                <label class="form-label">Points</label>
+                                <input type="text" name="cost_per_gift" class="form-control" value="<?php echo $wo['config']['cost_per_gift']?>">
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+
+                        <input type="hidden" name="hash_id" value="<?php echo Wo_CreateSession();?>">
+                        <button type="submit" class="btn btn-primary m-t-15 waves-effect">Save</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- #END# Vertical Layout -->
+<script>
+$(function() {
+    var form_site_settings = $('form.site-settings');
+    form_site_settings.ajaxForm({
+        url: Wo_Ajax_Requests_File() + '?f=admin_setting&s=update_general_setting&p=site-features',
+        beforeSend: function() {
+            form_site_settings.find('button').text('Please wait..');
+        },
+        success: function(data) {
+            if (data.status == 200) {
+            	form_site_settings.find('button').text('Save');
+                $("html, body").animate({ scrollTop: 0 }, "slow");
+            	$('.site-settings-alert').html('<div class="alert alert-success"><i class="fa fa-check"></i> Settings updated successfully</div>');
+            	setTimeout(function () {
+            		$('.site-settings-alert').empty();
+            	}, 2000);
+            }
+        }
+    });
+
+    var form_site_settings2 = $('form.site-settings2');
+    form_site_settings2.ajaxForm({
+        url: Wo_Ajax_Requests_File() + '?f=admin_setting&s=update_general_setting&p=site-features',
+        beforeSend: function() {
+            form_site_settings2.find('button').text('Please wait..');
+        },
+        success: function(data) {
+            if (data.status == 200) {
+                form_site_settings2.find('button').text('Save');
+                $("html, body").animate({ scrollTop: 0 }, "slow");
+                $('.site-settings-alert2').html('<div class="alert alert-success"><i class="fa fa-check"></i> Settings updated successfully</div>');
+                setTimeout(function () {
+                    $('.site-settings-alert2').empty();
+                }, 2000);
+            }
+        }
+    });
+
+    var form_site_settings3 = $('form.site-settings3');
+    form_site_settings3.ajaxForm({
+        url: Wo_Ajax_Requests_File() + '?f=admin_setting&s=update_general_setting&p=site-features',
+        beforeSend: function() {
+            form_site_settings3.find('button').text('Please wait..');
+        },
+        success: function(data) {
+            if (data.status == 200) {
+                form_site_settings3.find('button').text('Save');
+                $("html, body").animate({ scrollTop: 0 }, "slow");
+                $('.site-settings-alert3').html('<div class="alert alert-success"><i class="fa fa-check"></i> Settings updated successfully</div>');
+                setTimeout(function () {
+                    $('.site-settings-alert3').empty();
+                }, 2000);
+            }
+        }
+    });
+
+    var form_site_settings4 = $('form.site-settings4');
+    form_site_settings4.ajaxForm({
+        url: Wo_Ajax_Requests_File() + '?f=admin_setting&s=update_general_setting&p=site-features',
+        beforeSend: function() {
+            form_site_settings4.find('button').text('Please wait..');
+        },
+        success: function(data) {
+            if (data.status == 200) {
+                form_site_settings4.find('button').text('Save');
+                $("html, body").animate({ scrollTop: 0 }, "slow");
+                $('.site-settings-alert4').html('<div class="alert alert-success"><i class="fa fa-check"></i> Settings updated successfully</div>');
+                setTimeout(function () {
+                    $('.site-settings-alert4').empty();
+                }, 2000);
+            }
+        }
+    });
+
+    var form_site_settings5 = $('form.site-settings5');
+    form_site_settings5.ajaxForm({
+        url: Wo_Ajax_Requests_File() + '?f=admin_setting&s=update_general_setting&p=site-features',
+        beforeSend: function() {
+            form_site_settings5.find('button').text('Please wait..');
+        },
+        success: function(data) {
+            if (data.status == 200) {
+                form_site_settings5.find('button').text('Save');
+                $("html, body").animate({ scrollTop: 0 }, "slow");
+                $('.site-settings-alert5').html('<div class="alert alert-success"><i class="fa fa-check"></i> Settings updated successfully</div>');
+                setTimeout(function () {
+                    $('.site-settings-alert5').empty();
+                }, 2000);
+            }
+        }
+    });
+
+});
+
+</script>

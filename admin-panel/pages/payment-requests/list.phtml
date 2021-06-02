@@ -1,0 +1,31 @@
+<tr id="UserID_<?php echo $wo['userlist']['id']?>" data-user-id="<?php echo $wo['userlist']['user']->id?>" data_selected="<?php echo $wo['userlist']['id'] ?>">
+   <td><input type="checkbox" id="check-data-<?php echo $wo['userlist']['id'] ?>" class="delete-checkbox filled-in"><label for="check-data-<?php echo $wo['userlist']['id'] ?>"></label></td>
+   <td><?php echo $wo['userlist']['id']?></td>
+   <td>
+      <a href="<?php echo $wo['config']['site_url'] . '/@'.$wo['userlist']['user']->username; ?>">
+      <img src="<?php echo $wo['userlist']['user']->avater->avater; ?>" class="setting-avatar">
+      <?php echo $wo['userlist']['user']->username; ?>
+      </a>
+   </td>
+   <td><?php echo $wo['userlist']['user']->paypal_email;?></td>
+   <td>$<?php echo $wo['userlist']['amount'];?></td>
+   <td><a href="<?php echo Wo_LoadAdminLinkSettings('referrals-list?id=' . $wo['userlist']['user_id']); ?>">Show</a></td>
+   <td>
+   <?php 
+   if ($wo['userlist']['status'] == 0) {
+      echo '<span class="label label-warning">Pending</span>';
+   } else 
+   if ($wo['userlist']['status'] == 1) {
+      echo '<span class="label label-success">Approved</span>';
+   } else
+   if ($wo['userlist']['status'] == 2) {
+      echo '<span class="label label-danger">Declined</span>';
+   }
+   ?></td>
+   <td>
+       <?php if ($wo['userlist']['status'] == 0) { ?>
+      <button onclick="Wo_MarkPaid(<?php echo $wo['userlist']['id']?>,'hide');" type="button" class="btn bg-success admn_table_btn">Paid</button>
+      <button onclick="Wo_DeclinePayment(<?php echo $wo['userlist']['id']?>,'hide');" type="button" class="btn bg-danger admn_table_btn">Decline</button>
+       <?php }?>
+   </td>
+</tr>
